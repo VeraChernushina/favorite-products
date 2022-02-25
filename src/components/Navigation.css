@@ -1,19 +1,19 @@
-.header {
-  display: flex;
+.main-header {
   height: 3.5rem;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #96707a;
+  background-color: #ff2058;
 }
 
-.header nav {
+.main-header nav {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header ul {
+.main-header ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -22,19 +22,19 @@
   align-items: center;
 }
 
-.header li {
+.main-header li {
   padding: 0;
   margin: 0 2rem;
 }
 
-.header a {
+.main-header a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
 
-.header a:hover,
-.header a:active,
-.header a.active {
-  color: #331e36;
+.main-header a:hover,
+.main-header a:active,
+.main-header a.active {
+  color: #560061;
 }

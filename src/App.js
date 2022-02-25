@@ -1,13 +1,18 @@
+import React from 'react';
+import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Products from './components/Products/Products';
-import './App.css';
+import ProductsPage from './containers/Products';
+import FavoritesPage from './containers/Favorites';
 
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-      <Products />
-    </div>
+    <>
+      <main>
+        <Navigation />
+        <Route path="/" component={ProductsPage} exact />
+        <Route path="/favorites" component={FavoritesPage} />
+      </main>
+    </>
   );
 }
 

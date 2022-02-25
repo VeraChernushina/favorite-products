@@ -1,4 +1,4 @@
-import ProductItem from './ProductItem';
+import ProductItem from '../components/Products/ProductItem';
 import './Products.css';
 
 const Products = () => {
