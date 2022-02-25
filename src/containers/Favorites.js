@@ -1,8 +1,10 @@
+import FavoriteItem from '../components/Favorites/FavoriteItem';
+import './Products.css';
+
 const Favorites = () => {
   return (
     <div>
-      <h2>Fav item</h2>
-      <p>its description</p>
+      <FavoriteItem />
     </div>
   );
 };
