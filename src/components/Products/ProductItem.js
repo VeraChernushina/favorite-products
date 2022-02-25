@@ -1,16 +1,27 @@
+import { useDispatch } from 'react-redux';
+import { toggleFav } from '../../store/actions/products';
 import Card from '../UI/Card';
 
 import './ProductItem.css';
 
 const ProductItem = (props) => {
-  const toggleFavHandler = () => {};
+  const dispatch = useDispatch();
+
+  const toggleFavHandler = () => {
+    dispatch(toggleFav(props.id));
+  };
 
   return (
     <Card style={{ marginBottom: '1rem' }}>
       <div className="product-item">
-        <h2>Тестовый товар</h2>
-        <p>Описание тестового товара</p>
-        <button onClick={toggleFavHandler}>Кнопочка</button>
+        <h2 className={props.isFav ? 'is-fav' : ''}>{props.title}</h2>
+        <p>{props.description}</p>
+        <button
+          className={!props.isFav ? 'button-outline' : ''}
+          onClick={toggleFavHandler}
+        >
+          {props.isFav ? 'Удалить из избранного' : 'В избранное'}
+        </button>
       </div>
     </Card>
   );
